@@ -3,7 +3,8 @@ import os
 from dotenv import load_dotenv
 import time
 
-load_dotenv()  # Call the function here
+load_dotenv()  
+
 api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 
@@ -12,7 +13,7 @@ client = OpenAI(api_key=api_key)
 assistant_id = "asst_LvM5fVQc4nwVisQwCo3NUCVO"
 
 # Your prompt to the Assistant
-prompt = "What is the weather like today?"
+prompt = input('Enter your prompt: ')
 
 # Create a Thread
 thread = client.beta.threads.create()
